@@ -1,0 +1,119 @@
+/* arztcloud service container */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+.arztcloud-service-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  padding: 10vh 2vw 10vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.arztcloud-service-container .iframe-container {
+  position: relative;
+  width: 100vmin;
+  min-width: 300px;
+  max-width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.arztcloud-service-container.visible {
+  display: block;
+}
+
+.arztcloud-service-container.loading .iframe-container {
+  display: none!important;
+}
+
+.arztcloud-service-container .loading-screen {
+  display: none;
+}
+
+.arztcloud-service-container.loading .loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vmin;
+  min-width: 300px;
+  height: 100%;
+  margin: auto;
+  background-color: transparent;
+}
+
+.arztcloud-service-container .loading-screen > span{
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.arztcloud-service-container .loading-screen > span.bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.arztcloud-service-container .loading-screen > span.bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+.arztcloud-service-container .iframe-container iframe {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 7px;
+}
+
+.arztcloud-service-container button.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 2.2em;
+  height: 2.2em;
+  border: none;
+  background: none;
+  line-height: 1em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+/* notruf modal */
+.arztcloud-service-container .iframe-container.notruf-modal {
+  display: flex;
+}
