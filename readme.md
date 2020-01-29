@@ -2,7 +2,66 @@
 
 # arztcloud service integration 'Notruf'
 
-This package is
+This package offers a way to integrate the [arztcloud emergency call service](https://arztcloud.com/services/notruf) on your own website.
+With this package the [emergency call service](https://arztcloud.com/services/notruf) will be opened in an iframe placed in a modal.
+See <https://arztcloud.com> for a live preview (click on the phone button to open the modal).
+This package contains the button as well as the modal with the iframe.
+
+**To be able to use this feature on your website you require a charged token from arztcloud! Otherwise the site won't be shown in the iframe.**
+
+## Using this component
+
+### Integration
+
+#### Script tag
+
+-   Put a script tag similar to this `<script src='https://unpkg.com/@mhq-services/arztcloud-service-integration-notruf@1.0/dist/arztcloud-service-integration-notruf/arztcloud-service-integration-notruf.js'></script>` in the head of your index.html
+-   Then you can use the element anywhere in your template, JSX, html etc
+
+#### Node Modules
+
+-   Run `npm install @mhq-services/arztcloud-service-integration-notruf --save`
+-   Put a script tag similar to this `<script src='node_modules/mhq-services/arztcloud-service-integration-notruf/dist/arztcloud-service-integration-notruf/arztcloud-service-integration-notruf.js'></script>` in the head of your index.html
+-   Then you can use the element anywhere in your template, JSX, html etc
+
+### Components
+
+Place the button with
+
+```html
+<ac-notruf-button></ac-notruf-button>
+```
+
+and the modal with
+
+```html
+<ac-notruf-modal src="#your-personal-arztcloud-service-integration-notruf-link"></ac-notruf-modal>
+```
+
+### Customization
+
+#### Button
+
+Set the stroke width of the default icon with `stroke-width` (values 0 to 1 correspond 0% to 100% of the default stroke).
+
+Set the buttons attribute `default` to `false` to be able to replace the image/content of the button (see example index.html below).
+
+Finally you can simply style the button to e.g. change the (hover) color of the button to match with your websites colour scheme.
+
+```css
+button.ac-notruf-button {
+  font-size: 2.5em;
+  color: red;
+}
+button.ac-notruf-button:hover {
+  color: green;
+}
+button.ac-notruf-button:focus {
+  outline: none;
+}
+```
+
+# Development
 
 ## Getting Started
 
@@ -30,7 +89,8 @@ To run the unit tests for the components, run:
 npm test
 ```
 
-### Example index.html
+## Example index.html
+
 To test some variations you can copy this snippet to src/index.html.
 
 Since the ac-notruf-modal requires a custom link for the provided service (see attribute src),
@@ -71,15 +131,6 @@ we decided to ignore the index.html file to avoid negligent exposure of user dat
 </html>
 ```
 
-## Using this component
+## Publish
 
-### Script tag
-
-- [Publish to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages)
-- Put a script tag similar to this `<script src='https://unpkg.com/@mhq-services/arztcloud-service-integration-notruf@1.0/dist/arztcloud-service-integration-notruf/arztcloud-service-integration-notruf.js'></script>` in the head of your index.html
-- Then you can use the element anywhere in your template, JSX, html etc
-
-### Node Modules
-- Run `npm install @mhq-services/arztcloud-service-integration-notruf --save`
-- Put a script tag similar to this `<script src='node_modules/mhq-services/arztcloud-service-integration-notruf/dist/arztcloud-service-integration-notruf/arztcloud-service-integration-notruf.js'></script>` in the head of your index.html
-- Then you can use the element anywhere in your template, JSX, html etc
+[Publish to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages)
