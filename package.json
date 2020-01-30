@@ -1,6 +1,6 @@
 {
   "name": "@mhq-services/arztcloud-service-integration-notruf",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "arztcloud Nostruf Service Integration",
   "author": "Jaco Lüken",
   "main": "dist/index.js",

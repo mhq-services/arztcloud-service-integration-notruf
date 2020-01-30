@@ -99,15 +99,15 @@ we decided to ignore the index.html file to avoid negligent exposure of user dat
 ```html
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>arztcloud Notruf Service Integration</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <title>arztcloud Notruf Service Integration</title>
 
-  <script type="module" src="/build/arztcloud-service-integration-notruf.esm.js"></script>
-  <script nomodule src="/build/arztcloud-service-integration-notruf.js"></script>
+    <script type="module" src="/build/arztcloud-service-integration-notruf.esm.js"></script>
+    <script nomodule src="/build/arztcloud-service-integration-notruf.js"></script>
 
-</head>
+  </head>
   <body style="font-size: 2em;">
     <ac-notruf-button></ac-notruf-button>
 
